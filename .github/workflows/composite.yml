@@ -9,10 +9,10 @@ jobs:
     name: Job 1 Example
     steps:
       - id: foo1
-        uses: actions/github-action-composite@v1
+        uses: nhatmvo/github-action-composite@v1
   job2:
     runs-on: ubuntu-latest
     name: Job 2 Example
     steps:
       - id: foo2
-        uses: actions/github-action-composite@v1
+        uses: nhatmvo/github-action-composite@v1
