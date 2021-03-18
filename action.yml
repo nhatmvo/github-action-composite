@@ -8,16 +8,16 @@ inputs:
 runs:
   using: "composite"
   steps: 
-    - name: Go to desired working directory
-      run: echo ${{ inputs.workingDirectory }}
-      shell: bash
     - name: Get current working directory
       run: echo $PWD
       shell: bash
+      working-directory: ${{ inputs.workingDirectory }}
     - name: First Command
-      run: echo "Executing step 1"
+      run: ./sample.sh
       shell: bash
+      working-directory: ${{ inputs.workingDirectory }}
     - name: Second Command
       run: echo "Executing step 2"
       shell: bash
+      working-directory: ${{ inputs.workingDirectory }}
       
