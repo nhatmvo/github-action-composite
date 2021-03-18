@@ -19,7 +19,7 @@ jobs:
       - name: Executing Composite Action
         uses: nhatmvo/github-action-composite@v1
         with:
-          workingDirectory: scripts
+          workingDirectory: ./scripts
   job2:
     runs-on: ubuntu-latest
     name: Job 2 Example
