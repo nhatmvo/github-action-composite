@@ -1,10 +1,17 @@
 name: composite-action
 description: "Reusable multiple steps of github action"
+inputs:
+  workingDirectory:
+    description: "The working directory this composite actions will be run from"
+    required: true
+    default: "~"
 runs:
   using: "composite"
   steps: 
-    - name: List Current Working Directory
-      run: ls -a
+    - name: Go to desired working directory
+      run: cd ${{ inputs.workingDirectory }}
+    - name: Get current working directory
+      run: echo $PWD
       shell: bash
     - name: First Command
       run: echo "Executing step 1"
