@@ -10,6 +10,7 @@ runs:
   steps: 
     - name: Go to desired working directory
       run: cd ${{ inputs.workingDirectory }}
+      shell: bash
     - name: Get current working directory
       run: echo $PWD
       shell: bash
