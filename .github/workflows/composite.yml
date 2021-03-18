@@ -4,10 +4,16 @@ on:
     branches:
       - master
 jobs:
+  defaults:
+    run:
+      shell: bash
+      working-directory: ./scripts
   job1: 
     runs-on: ubuntu-latest
     name: Job 1 Example
     steps:
+      - name: Get Current Working Directory
+        run: ls -a
       - id: foo1
         uses: nhatmvo/github-action-composite@v1
   job2:
