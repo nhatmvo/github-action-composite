@@ -9,7 +9,7 @@ runs:
   using: "composite"
   steps: 
     - name: Go to desired working directory
-      run: cd ${{ inputs.workingDirectory }}
+      run: echo ${{ inputs.workingDirectory }}
       shell: bash
     - name: Get current working directory
       run: echo $PWD
