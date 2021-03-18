@@ -4,12 +4,12 @@ runs:
   using: "composite"
   steps: 
     - name: List Current Working Directory
-      run: ls
+      run: ls -a
       shell: bash
     - name: First Command
-      run: echo "Step 1"
+      run: echo "Executing step 1"
       shell: bash
     - name: Second Command
-      run: echo "Step 2"
+      run: echo "Executing step 2"
       shell: bash
       
