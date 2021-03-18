@@ -24,5 +24,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Job 2 Example
     steps:
-      - id: foo2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Get Current Working Directory
+        run: echo $PWD
+      - name: Executing Composite Action
         uses: nhatmvo/github-action-composite@v1
+        with:
+          workingDirectory: ./scripts-2
