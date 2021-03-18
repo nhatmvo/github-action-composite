@@ -3,8 +3,13 @@ description: "Reusable multiple steps of github action"
 runs:
   using: "composite"
   steps: 
-    - run: echo "Step 1"
+    - name: List Current Working Directory
+      run: ls
       shell: bash
-    - run: echo "Step 2"
+    - name: First Command
+      run: echo "Step 1"
+      shell: bash
+    - name: Second Command
+      run: echo "Step 2"
       shell: bash
       
