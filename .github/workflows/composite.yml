@@ -4,11 +4,11 @@ on:
     branches:
       - master
 jobs:
-  defaults:
+  job1: 
+    defaults:
     run:
       shell: bash
       working-directory: ./scripts
-  job1: 
     runs-on: ubuntu-latest
     name: Job 1 Example
     steps:
