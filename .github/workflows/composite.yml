@@ -6,9 +6,9 @@ on:
 jobs:
   job1: 
     defaults:
-    run:
-      shell: bash
-      working-directory: ./scripts
+      run:
+        shell: bash
+        working-directory: ./scripts
     runs-on: ubuntu-latest
     name: Job 1 Example
     steps:
