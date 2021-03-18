@@ -5,17 +5,18 @@ on:
       - master
 jobs:
   job1: 
+    name: Job 1 Example
+    runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
         working-directory: ./scripts
-    runs-on: ubuntu-latest
-    name: Job 1 Example
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
       - name: Get Current Working Directory
-        run: ls
-      - id: foo1
-        name: Executing Composite Action
+        run: echo $PWD
+      - name: Executing Composite Action
         uses: nhatmvo/github-action-composite@v1
   job2:
     runs-on: ubuntu-latest
